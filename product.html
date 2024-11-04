@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>제품 목록 | 스카치</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/sub.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/sub.js"></script>
+        <script src="./js/language.js"></script>
+    </head>
+    <body>
+        <a href="#main"><i class="hidden">본문으로 바로가기</i></a>
+        <a href="#footer"><i class="hidden">하단으로 바로가기</i></a>
+        <hr />
+
+        <header id="header">
+            <div class="inner">
+                <nav>
+                    <!-- 헤더 로고 -->
+                    <h1 class="logo">
+                        <a href="./"><i class="hidden">스카치 브랜드 로고</i></a>
+                    </h1>
+
+                    <!-- 상단 메뉴 -->
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">브랜드 소개</a>
+                            <ul class="lnb">
+                                <li><a href="#">3M</a></li>
+                                <li><a href="#">스카치</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./product.html">제품</a>
+                            <ul class="lnb">
+                                <li><a href="#">테이프</a></li>
+                                <li><a href="#">풀 &amp; 접착제</a></li>
+                                <li><a href="#">패키징 솔루션</a></li>
+                                <li>
+                                    <a href="#">양면 테이프<br />탈부착 테이프</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">용도와 팁</a>
+                            <ul class="lnb">
+                                <li><a href="#">테이프의 모든 것</a></li>
+                                <li><a href="#">선물 포장의 기초</a></li>
+                                <li>
+                                    <a href="#">순간 접착제<br />사용 가이드</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">고객지원</a>
+                            <ul class="lnb">
+                                <li><a href="#">자주 묻는 질문</a></li>
+                                <li><a href="#">고객문의</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- 유틸리티 메뉴 -->
+                    <div class="util-menu">
+                        <div class="custom-select language-select">
+                            <select name="language" id="language">
+                                <option value="ko">한국어</option>
+                                <option value="en">English</option>
+                            </select>
+                            <div class="select-arrow"></div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <hr />
+
+        <main id="main">
+            <section class="products">
+                <div class="inner">
+                    <h2 class="section-title">제품 목록</h2>
+                    <form action="#" method="#" class="filter">
+                        <fieldset>
+                            <legend class="hidden">검색 필터 항목</legend>
+
+                            <div class="h-wrap search">
+                                <label for="search-text">검색어</label>
+                                <input type="text" placeholder="제품명" id="search-text" />
+                                <button type="button" class="search-icon" aria-label="검색">
+                                    <i class="ri-search-line"></i>
+                                </button>
+                            </div>
+
+                            <div class="h-wrap category">
+                                <label for="category">카테고리</label>
+                                <div class="select-wrap">
+                                    <select id="category">
+                                        <option value="all">모두</option>
+                                        <option value="tape">테이프</option>
+                                        <option value="glue">풀 &amp; 접착제</option>
+                                        <option value="packaging">패키징 솔루션</option>
+                                        <option value="doublesided">양면 테이프 / 탈부착 테이프</option>
+                                        <option value="other">기타</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="h-wrap sort">
+                                <label for="sort">정렬</label>
+                                <div class="select-wrap">
+                                    <select id="sort">
+                                        <option value="name_asc">가나다 순</option>
+                                        <option value="price_desc">높은 가격 순</option>
+                                        <option value="price_asc">낮은 가격 순</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="search-result-wrap">
+                        <p class="search-result-information">검색 결과를 불러오고 있습니다.</p>
+                        <div class="separate-line"></div>
+                        <ul class="product-list-wrap">
+                            <!-- <li>
+                                <a href="#">
+                                    <figure>
+                                        <img src="./img/product_1.png" alt="제품명" />
+                                        <figcaption class="hidden">제품명</figcaption>
+                                    </figure>
+                                    <div class="product-content">
+                                        <strong>제품명</strong>
+                                        <p>판매처 - 판매스토어명</p>
+                                    </div>
+                                </a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <hr />
+
+        <footer id="footer">
+            <div class="inner">
+                <div class="footer-content">
+                    <div class="top-menu">
+                        <h1 class="footer-logo">
+                            <a href="./"><i class="hidden">스카치 브랜드 로고</i></a>
+                        </h1>
+                        <ul class="link-list">
+                            <li>
+                                <a href="#"><b class="highlight-link">개인정보 처리 방침</b></a>
+                            </li>
+                            <li><a href="#">법적 정보</a></li>
+                            <li><a href="#">쿠키 설정</a></li>
+                        </ul>
+                        <div class="custom-select family-select">
+                            <select name="family-site" id="family-site">
+                                <option value="3M">3M</option>
+                                <option value="postit">포스트잇</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="separate-line"></div>
+                    <div class="bottom-menu">
+                        <ul class="information">
+                            <li>
+                                <dl>
+                                    <dt>대표자</dt>
+                                    <dd>이정한</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>사업자등록번호</dt>
+                                    <dd>116-81-06399</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <ul class="information">
+                            <li>
+                                <dl>
+                                    <dt>주소</dt>
+                                    <dd>서울특별시 영등포구 의사당대로 82, 22층</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>대표전화</dt>
+                                    <dd>080-033-4114</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <p class="copyright">&copy; 3M 2024. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
