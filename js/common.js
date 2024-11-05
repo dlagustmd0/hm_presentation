@@ -19,7 +19,10 @@ $(() => {
     const $header = $("header");
     const $menu = $(".gnb > li");
     const $submenu = $(".gnb > li > .lnb");
+    const $mMenuBtn = $(".util-menu > .btn-menu");
+    const $mHideContents = $("#main, #footer");
     const $selects = $(".select-wrap select");
+    const $window = $(window);
     const duration = 300;
 
     $menu.on("mouseenter", function () {
@@ -54,4 +57,15 @@ $(() => {
                 setCookie("filter", $linkItem.attr("data-filter"), 1);
             });
         });
+
+    let isShowMenu = false;
+    let cacheScroll = 0;
+
+    $mMenuBtn.on("click", () => {
+        isShowMenu = !isShowMenu;
+        if (isShowMenu) cacheScroll = window.scrollY;
+        $mHideContents.toggle(!isShowMenu);
+        $header.toggleClass("mobile-menu", isShowMenu);
+        window.scrollTo({ top: !isShowMenu ? cacheScroll : 0, behavior: "instant" });
+    });
 });
