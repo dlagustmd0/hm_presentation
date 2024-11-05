@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 #main > section + section {
-    padding: 12rem 0;
+    /* padding: 12rem 0; */
+    padding: clamp(6rem, 8.789vw, 12rem) 0;
 }
 .product,
 .review {
@@ -87,16 +88,19 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 132rem; /* 이 부분 inner랑 용도가 겹치므로 리팩토링해야 함. */
+    /* width: 68.75%; */
+    width: clamp(min(90%, 39rem), 92.1875vw, 132rem);
     transform: translate(-50%, -50%);
 }
 .visual-title h2 {
-    font-size: 7.2rem;
+    /* font-size: 7.2rem; */
+    font-size: clamp(4.8rem, 5.8593vw, 7.2rem);
     font-weight: 700;
     color: var(--color-white-100);
 }
 .visual-title p {
-    font-size: 4rem;
+    /* font-size: 4rem; */
+    font-size: clamp(2.6rem, 3.2226vw, 4rem);
     font-weight: 400;
     color: var(--color-white-100);
 }
@@ -115,8 +119,10 @@
 .welcome-wrap::before {
     content: "";
     display: block;
-    width: 400px;
-    height: 400px;
+    /* width: 400px; */
+    width: min(100%, 400px);
+    /* height: 400px; */
+    aspect-ratio: 1/1;
     background: url(../img/welcome.png) no-repeat 50% / cover;
     border: 1px solid rgba(0, 0, 0, 0.05);
     flex-shrink: 0;
@@ -129,10 +135,12 @@
 }
 .welcome-content strong {
     font-weight: 700;
-    font-size: 4.8rem;
+    /* font-size: 4.8rem; */
+    font-size: clamp(3.2rem, 3.9062vw, 4.8rem);
 }
 .welcome-content p {
-    font-size: 2.6rem;
+    /* font-size: 2.6rem; */
+    font-size: clamp(2rem, 2.246vw, 2.6rem);
     color: #444;
 }
 .welcome-content b {
@@ -140,7 +148,8 @@
 }
 
 .product-family {
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
+    margin-top: clamp(4rem, 4.8828vw, 6rem);
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -154,7 +163,7 @@
 }
 .product-family li a {
     display: flex;
-    padding: 1rem 2rem;
+    padding: 2rem;
     gap: 3rem;
     align-items: center;
 }
@@ -195,9 +204,11 @@
 .under-btn {
     text-decoration: underline;
     color: #666;
+    font-size: clamp(2rem, 2.05vw, 2.2rem);
 }
 .use-and-tip-list {
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
+    margin-top: clamp(4rem, 4.8828vw, 6rem);
     display: flex;
     justify-content: space-between;
 }
@@ -216,7 +227,7 @@
     display: block;
     width: 38rem;
     height: 38rem;
-    background: no-repeat 0 / cover;
+    background: no-repeat 50% 0 / cover;
     border-radius: 20px;
 }
 .use-and-tip-list li a::after {
@@ -259,8 +270,10 @@
 }
 .review-image {
     flex-shrink: 0;
-    width: 40rem;
-    height: 40rem;
+    /* width: 40rem; */
+    width: min(100%, 40rem);
+    /* height: 40rem; */
+    height: min(100%, 40rem);
     border-radius: 20px;
     overflow: hidden;
 }
@@ -299,7 +312,8 @@
     position: relative;
 }
 .review-slider-wrap {
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
+    margin-top: clamp(4rem, 5.8593vw, 8rem);
 }
 .review-slider-wrap .btn-prev,
 .review-slider-wrap .btn-next {
@@ -341,7 +355,8 @@
 .review-slider-wrap .pagination {
     position: absolute;
     left: 50%;
-    bottom: 25.6rem;
+    /* bottom: 25.6rem; */
+    bottom: clamp(15.6rem, 22.0703vw, 25.6rem);
     transform: translateX(-50%);
     width: auto;
     z-index: 2;
@@ -363,4 +378,63 @@
 }
 .review .btn-wrap {
     margin-top: 14rem;
+}
+
+@media screen and (max-width: 1300px) {
+    .product .product-family {
+        /* margin-top: 8rem; */
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 5rem; /* figma: 8rem */
+    }
+    .product .product-family li {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .use-and-tip .use-and-tip-list {
+        /* margin-top: 8rem; */
+        flex-direction: column;
+        gap: 9rem;
+    }
+    .use-and-tip .use-and-tip-list li {
+        width: 100%;
+    }
+    .use-and-tip .use-and-tip-list li a::before {
+        width: 100%;
+    }
+    .use-and-tip .use-and-tip-list li a::after {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .visual .visual-slider-wrap .btn-next,
+    .visual .visual-slider-wrap .btn-prev {
+        display: none;
+    }
+
+    .review .review-slider-wrap .btn-next,
+    .review .review-slider-wrap .btn-prev {
+        display: none;
+    }
+    .review .review-slider-wrap .swiper-slide {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .product .product-family li a {
+        flex-direction: column;
+    }
+    .product .product-family li {
+        flex: 1 1 100%;
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+    .product .product-family li a {
+        height: 100%;
+        justify-content: center;
+    }
 }
