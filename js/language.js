@@ -167,7 +167,7 @@ $(() => {
         },
     };
 
-    const $languageSelect = $("#language");
+    const $languageSelect = $("#language, #mobile-language");
 
     function setCookie(name, value, days) {
         const expires = new Date();
