@@ -170,13 +170,18 @@ hr {
     padding: 2rem 0;
     text-align: center;
 }
+.util-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
 .mobile-gnb {
     display: none;
 }
 #header.mobile-menu {
     position: static;
-    height: 130rem; /* BAD */
+    height: 140rem; /* BAD */
     overflow-y: hidden;
 }
 #header.mobile-menu .mobile-gnb {
@@ -185,7 +190,8 @@ hr {
     top: 15rem;
     display: flex;
     flex-direction: column;
-    padding: 0 5rem;
+    padding: 0 3rem;
+    width: 100%;
 }
 #header.mobile-menu .mobile-gnb > li + li {
     margin-top: 3rem;
@@ -206,6 +212,16 @@ hr {
 #header.mobile-menu .btn-menu::after {
     content: "\EB99";
     font-size: 5rem;
+}
+#header.mobile-menu .mobile-gnb .select-lang {
+    width: 100%;
+}
+#header.mobile-menu .mobile-gnb .select-lang select {
+    width: 100%;
+}
+#header.mobile-menu .util-menu > .select-lang {
+    /* display: block; */
+    display: none;
 }
 
 .custom-select {
@@ -447,7 +463,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1030px) {
     .inner {
         width: 92.1875%;
     }
@@ -458,9 +474,6 @@ hr {
     }
 
     .gnb {
-        display: none;
-    }
-    .util-menu .select-lang {
         display: none;
     }
     .util-menu .btn-menu {
@@ -490,5 +503,8 @@ hr {
 @media screen and (max-width: 430px) {
     .inner {
         width: 90.6977%;
+    }
+    .util-menu .select-lang {
+        display: none;
     }
 }
