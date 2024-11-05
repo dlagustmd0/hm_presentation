@@ -25,6 +25,7 @@ $(() => {
         keyboard: {
             enabled: true,
         },
+        spaceBetween: 80,
         pagination: {
             el: ".review-slider-wrap .pagination",
             clickable: true,
