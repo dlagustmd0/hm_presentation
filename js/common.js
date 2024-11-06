@@ -61,11 +61,16 @@ $(() => {
     let isShowMenu = false;
     let cacheScroll = 0;
 
-    $mMenuBtn.on("click", () => {
+    function toggleMobileGNB() {
         isShowMenu = !isShowMenu;
         if (isShowMenu) cacheScroll = window.scrollY;
         $mHideContents.toggle(!isShowMenu);
         $header.toggleClass("mobile-menu", isShowMenu);
         window.scrollTo({ top: !isShowMenu ? cacheScroll : 0, behavior: "instant" });
+    }
+
+    $mMenuBtn.on("click", toggleMobileGNB);
+    $window.on("resize", () => {
+        if (isShowMenu) toggleMobileGNB();
     });
 });

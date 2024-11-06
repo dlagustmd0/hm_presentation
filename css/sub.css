@@ -73,6 +73,7 @@
     /* margin-top: 8rem; */
     /* margin-top: 6rem; */
     margin-top: clamp(6rem, 6.8359vw, 8rem);
+    min-height: 50vh;
 }
 .search-result-information {
     font-size: 2rem;
