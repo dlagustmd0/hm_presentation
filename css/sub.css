@@ -1,16 +1,21 @@
 @charset "utf-8";
 
 #main > section {
-    padding: 12rem 0;
+    /* padding: 12rem 0; PC */
+    /* padding: 5rem 0; */
+    padding: clamp(4rem, 7.8125vw, 12rem) 0;
 }
 
 .filter {
-    margin-top: 5.5rem;
+    /* margin-top: 5.5rem; */
+    /* margin-top: 3.5rem; */
+    margin-top: clamp(3.5rem, 4.3945vw, 5.5rem);
 }
 .filter > fieldset {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem 5rem;
 }
 .h-wrap {
     display: flex;
@@ -35,6 +40,10 @@
 }
 .h-wrap.search input {
     width: 100%;
+}
+.h-wrap label {
+    /* font-size: 2rem; */
+    font-size: clamp(2rem, 2.0507vw, 2.2rem);
 }
 .h-wrap.search .search-icon {
     position: absolute;
@@ -61,7 +70,9 @@
 }
 
 .search-result-wrap {
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
+    /* margin-top: 6rem; */
+    margin-top: clamp(6rem, 6.8359vw, 8rem);
 }
 .search-result-information {
     font-size: 2rem;
@@ -79,7 +90,7 @@
     gap: 10rem 5rem;
 }
 .product-list-wrap li {
-    flex: 0 1 30%;
+    flex: 0 1 29%;
 }
 .product-list-wrap li a {
     aspect-ratio: 1/1;
@@ -95,8 +106,53 @@
 }
 .product-content strong {
     font-weight: 600;
+    /* font-size: 1.8rem; */
+    font-size: clamp(1.8rem, 1.3586vw, 2.2rem);
 }
 .product-content p {
     font-weight: 500;
+    /* font-size: 2rem; */
+    /* font-size: 1.6rem; */
+    font-size: clamp(1.6rem, 1.2228vw, 2rem); /* 1472 */
+    margin-top: 1rem;
     color: rgba(34, 34, 34, 0.6);
+}
+
+@media screen and (max-width: 1024px) {
+    .product-list-wrap li {
+        flex: 0 1 45%;
+    }
+
+    .product-content strong {
+        /* font-size: 2.2rem; */
+        /* font-size: 1.8rem; */
+        font-size: clamp(1.8rem, 2.463vw, 2.2rem); /* 812 */
+    }
+
+    .product-content p {
+        /* font-size: 2rem; */
+        /* font-size: 1.6rem; */
+        font-size: clamp(1.6rem, 2.2167vw, 2rem);
+        /* margin-top: 1rem; */
+        margin-top: clamp(0px, 0.9765vw, 1rem);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product-list-wrap li {
+        flex: 0 1 100%;
+    }
+
+    .product-content strong {
+        /* font-size: 2.6rem; */
+        /* font-size: 2.2rem; */
+        font-size: clamp(2.2rem, 4.8484vw, 2.6rem); /* 495 */
+    }
+
+    .product-content p {
+        /* font-size: 2.4rem; */
+        /* font-size: 2rem; */
+        font-size: clamp(2rem, 4.4444vw, 2.4rem);
+        margin-top: 1rem;
+    }
 }

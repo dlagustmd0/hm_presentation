@@ -220,7 +220,9 @@
 .use-and-tip-list li a {
     display: flex;
     flex-direction: column;
-    gap: 4.5rem;
+    /* gap: 4.5rem; */
+    /* gap: 2rem; */
+    gap: clamp(2rem, 3.1738vw, 4.5rem);
 }
 .use-and-tip-list li a::before {
     content: "";
@@ -265,7 +267,9 @@
 
 .review-slider-wrap .swiper-slide {
     display: flex;
-    gap: 9rem;
+    /* gap: 9rem; pc */
+    /* gap: 1rem; mobile */
+    gap: clamp(1rem, 4.8828vw, 9rem);
     align-items: center;
 }
 .review-image {
@@ -305,7 +309,9 @@
 }
 .review-card-content {
     font-weight: 500;
-    min-height: 25rem;
+    /* min-height: 25rem; */
+    /* min-height: 10rem; */
+    min-height: clamp(10rem, 17.0898vw, 25rem);
 }
 
 .review {
