@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+#main > section {
+	/* padding: 12rem 0; PC */
+	/* padding: 5rem 0; */
+	padding: clamp(4rem, 7.8125vw, 12rem) 0;
+}
+
+/* 제품 페이지 스타일 */
+.filter {
+	/* margin-top: 5.5rem; */
+	/* margin-top: 3.5rem; */
+	margin-top: clamp(3.5rem, 4.3945vw, 5.5rem);
+}
+.filter > fieldset {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 2rem 5rem;
+}
+.h-wrap {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	position: relative;
+}
+.h-wrap > label::after {
+	content: ":";
+}
+.h-wrap > input[type="text"] {
+	padding: 0.7rem 6rem 0.7rem 2rem;
+	width: 50rem;
+	height: 5rem;
+	border: 1px solid var(--color-text);
+	border-radius: 5px;
+	font-size: 1.6rem;
+	color: var(--color-text);
+}
+.h-wrap.search {
+	position: relative;
+}
+.h-wrap.search input {
+	width: 100%;
+}
+.h-wrap label {
+	/* font-size: 2rem; */
+	font-size: clamp(2rem, 2.0507vw, 2.2rem);
+}
+.h-wrap.search .search-icon {
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: black;
+	font-size: 2rem;
+	transition: color 0.3s ease;
+
+	padding: 1.5rem;
+	width: 5rem;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.h-wrap.search .search-icon:hover,
+.h-wrap.search input:focus + .search-icon {
+	color: var(--color-primary);
+}
+
+.search-result-wrap {
+	/* margin-top: 8rem; */
+	/* margin-top: 6rem; */
+	margin-top: clamp(6rem, 6.8359vw, 8rem);
+	min-height: 50vh;
+}
+.search-result-information {
+	font-size: 2rem;
+}
+.separate-line {
+	width: 100%;
+	height: 1px;
+	background: var(--color-text);
+	margin-top: 2rem;
+}
+.product-list-wrap {
+	margin-top: 3.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10rem 5rem;
+}
+.product-list-wrap li {
+	flex: 0 1 29%;
+}
+.product-list-wrap li a {
+	aspect-ratio: 1/1;
+	width: 37rem;
+}
+.product-list-wrap li figure {
+	aspect-ratio: 1/1;
+	overflow: hidden;
+	border-radius: 20px;
+}
+.product-content {
+	margin-top: 3rem;
+}
+.product-content strong {
+	font-weight: 600;
+	/* font-size: 1.8rem; */
+	font-size: clamp(1.8rem, 1.3586vw, 2.2rem);
+}
+.product-content p {
+	font-weight: 500;
+	/* font-size: 2rem; */
+	/* font-size: 1.6rem; */
+	font-size: clamp(1.6rem, 1.2228vw, 2rem); /* 1472 */
+	margin-top: 1rem;
+	color: rgba(34, 34, 34, 0.6);
+}
+
+/* 3M 소개 페이지 스타일 */
+#main > .breadcrumb {
+	position: absolute;
+	width: 100%;
+	padding: 4rem 0;
+}
+.breadcrumb-wrap {
+	display: flex;
+	justify-content: space-between;
+}
+
+.about {
+	background: url(/static/img/3m_woman_and_child.png) no-repeat 0% / cover;
+	height: calc(100vh - 10rem);
+	margin-top: 10rem;
+}
+.about-contents {
+	padding: 13.8rem 0;
+}
+
+@media screen and (max-width: 1024px) {
+	.product-list-wrap li {
+		flex: 0 1 45%;
+	}
+
+	.product-content strong {
+		/* font-size: 2.2rem; */
+		/* font-size: 1.8rem; */
+		font-size: clamp(1.8rem, 2.463vw, 2.2rem); /* 812 */
+	}
+
+	.product-content p {
+		/* font-size: 2rem; */
+		/* font-size: 1.6rem; */
+		font-size: clamp(1.6rem, 2.2167vw, 2rem);
+		/* margin-top: 1rem; */
+		margin-top: clamp(0px, 0.9765vw, 1rem);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.product-list-wrap li {
+		flex: 0 1 100%;
+	}
+
+	.product-content strong {
+		/* font-size: 2.6rem; */
+		/* font-size: 2.2rem; */
+		font-size: clamp(2.2rem, 4.8484vw, 2.6rem); /* 495 */
+	}
+
+	.product-content p {
+		/* font-size: 2.4rem; */
+		/* font-size: 2rem; */
+		font-size: clamp(2rem, 4.4444vw, 2.4rem);
+		margin-top: 1rem;
+	}
+}
