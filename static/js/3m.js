@@ -50,7 +50,7 @@ $(() => {
             start: "top center", // 스크롤이 .environment 요소의 상단이 화면의 절반에 도달할 때 시작
             end: "center center", // .environment 요소의 하단이 화면의 절반에 도달할 때 끝
             scrub: true, // 스크롤에 따라 애니메이션이 자연스럽게 이어짐
-            markers: true, // marker 표시로 디버깅 가능하게 설정
+            // markers: true, // marker 표시로 디버깅 가능하게 설정
         },
         backgroundColor: "#222", // 배경색을 빨간색으로 변경 (원하는 색으로 수정)
     });
