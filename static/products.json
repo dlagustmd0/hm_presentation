@@ -1,74 +1,74 @@
 [
-	{
-		"image": "/static/img/product_1.png",
-		"name": "실외용 문풍지, 중형, 9.5mm x 13mm x 3.05m, 24개/박스",
-		"seller": "G마켓",
-		"storeName": "3M한신그레이스",
-		"category": "other",
-		"price": 15000
-	},
-	{
-		"image": "/static/img/product_2.png",
-		"name": "재접착 폼 양면 테이프 R103, 투명, 1.75cm x 1.75cm, 72개, 24개/케이스",
-		"seller": "네이버쇼핑",
-		"storeName": "MRO Mart",
-		"category": "doublesided",
-		"price": 8500
-	},
-	{
-		"image": "/static/img/product_3.png",
-		"name": "강력 탈부착 테이프, 검정, 2.54cm x 7.62cm, 2쌍, 24개/케이스",
-		"seller": "네이버쇼핑",
-		"storeName": "MRO Mart, 드림팩토리",
-		"category": "doublesided",
-		"price": 12000
-	},
-	{
-		"image": "/static/img/product_4.png",
-		"name": "강력 탈부착 테이프, 투명, 2.54cm x 7.62cm, 2쌍, 24개/케이스",
-		"seller": "네이버쇼핑",
-		"storeName": "MRO Mart",
-		"category": "doublesided",
-		"price": 11500
-	},
-	{
-		"image": "/static/img/product_5.png",
-		"name": "디스펜서 DP300, 17cm x 7.5cm, 레드, 6개/박스",
-		"seller": "네이버쇼핑",
-		"storeName": "드림팩토리",
-		"category": "packaging",
-		"price": 22000
-	},
-	{
-		"image": "/static/img/product_6.png",
-		"name": "투명 테이프 디스펜서 리필 세트 550, 1인치용, 디스펜서 18mm x 15m 1개",
-		"seller": "네이버쇼핑",
-		"storeName": "드림팩토리",
-		"category": "tape",
-		"price": 7500
-	},
-	{
-		"image": "/static/img/product_7.png",
-		"name": "매직 풀 6615, 2.3cm x 2.3cm x 11cm, 15 g, 퍼플, 360개/박스",
-		"seller": "네이버쇼핑",
-		"storeName": "드림팩토리",
-		"category": "glue",
-		"price": 18000
-	},
-	{
-		"image": "/static/img/product_8.png",
-		"name": "투명 테이프 리필 502, 3인치용, 12mm x 20m, 8롤, 30 팩/박스, 6 plus 2",
-		"seller": "네이버쇼핑",
-		"storeName": "드림팩토리",
-		"category": "tape",
-		"price": 9500
-	},
-	{
-		"image": "/static/img/product_9.png",
-		"name": "양면 테이프 017, 8.4mm x 8m, 퍼플, 40개/박스",
-		"seller": "네이버쇼핑",
-		"storeName": "MRO Mart",
-		"category": "doublesided",
-		"price": 13500
-	}
+    {
+        "image": "../static/img/product_1.png",
+        "name": "실외용 문풍지, 중형, 9.5mm x 13mm x 3.05m, 24개/박스",
+        "seller": "G마켓",
+        "storeName": "3M한신그레이스",
+        "category": "other",
+        "price": 15000
+    },
+    {
+        "image": "../static/img/product_2.png",
+        "name": "재접착 폼 양면 테이프 R103, 투명, 1.75cm x 1.75cm, 72개, 24개/케이스",
+        "seller": "네이버쇼핑",
+        "storeName": "MRO Mart",
+        "category": "doublesided",
+        "price": 8500
+    },
+    {
+        "image": "../static/img/product_3.png",
+        "name": "강력 탈부착 테이프, 검정, 2.54cm x 7.62cm, 2쌍, 24개/케이스",
+        "seller": "네이버쇼핑",
+        "storeName": "MRO Mart, 드림팩토리",
+        "category": "doublesided",
+        "price": 12000
+    },
+    {
+        "image": "../static/img/product_4.png",
+        "name": "강력 탈부착 테이프, 투명, 2.54cm x 7.62cm, 2쌍, 24개/케이스",
+        "seller": "네이버쇼핑",
+        "storeName": "MRO Mart",
+        "category": "doublesided",
+        "price": 11500
+    },
+    {
+        "image": "../static/img/product_5.png",
+        "name": "디스펜서 DP300, 17cm x 7.5cm, 레드, 6개/박스",
+        "seller": "네이버쇼핑",
+        "storeName": "드림팩토리",
+        "category": "packaging",
+        "price": 22000
+    },
+    {
+        "image": "../static/img/product_6.png",
+        "name": "투명 테이프 디스펜서 리필 세트 550, 1인치용, 디스펜서 18mm x 15m 1개",
+        "seller": "네이버쇼핑",
+        "storeName": "드림팩토리",
+        "category": "tape",
+        "price": 7500
+    },
+    {
+        "image": "../static/img/product_7.png",
+        "name": "매직 풀 6615, 2.3cm x 2.3cm x 11cm, 15 g, 퍼플, 360개/박스",
+        "seller": "네이버쇼핑",
+        "storeName": "드림팩토리",
+        "category": "glue",
+        "price": 18000
+    },
+    {
+        "image": "../static/img/product_8.png",
+        "name": "투명 테이프 리필 502, 3인치용, 12mm x 20m, 8롤, 30 팩/박스, 6 plus 2",
+        "seller": "네이버쇼핑",
+        "storeName": "드림팩토리",
+        "category": "tape",
+        "price": 9500
+    },
+    {
+        "image": "../static/img/product_9.png",
+        "name": "양면 테이프 017, 8.4mm x 8m, 퍼플, 40개/박스",
+        "seller": "네이버쇼핑",
+        "storeName": "MRO Mart",
+        "category": "doublesided",
+        "price": 13500
+    }
 ]
