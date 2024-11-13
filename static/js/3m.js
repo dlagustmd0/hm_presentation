@@ -40,7 +40,7 @@ $(() => {
             opacity: 1,
             y: 0,
             stagger: 1, // 각 p 요소가 1초 간격으로 나타남
-            duration: 10,
+            duration: 6,
             ease: "power3.out", // 부드럽게 나타나도록 설정
         });
 
@@ -62,6 +62,7 @@ $(() => {
             start: "top center",
             end: "center center",
             scrub: true,
+            // markers: true,
         },
     });
 

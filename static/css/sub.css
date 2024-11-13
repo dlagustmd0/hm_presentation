@@ -243,6 +243,7 @@
 }
 
 .environment {
+    padding: 50rem 0 5rem !important;
 }
 .environment .title {
     font-weight: 700;
@@ -258,6 +259,7 @@
 }
 .environment .text-content-wrap .emphasize {
     margin-top: 8rem;
+    font-weight: 700;
 }
 .environment .title i {
     color: #00ff38;
