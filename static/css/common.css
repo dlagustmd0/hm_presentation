@@ -160,7 +160,7 @@ hr {
     transition: 0.4s;
 }
 #header.expand .gnb > li > a {
-    padding: 3rem 8rem;
+    padding: 3rem 5rem;
 }
 .lnb {
     position: absolute;

@@ -187,6 +187,10 @@ $(() => {
     }
 
     function changeLanguage(lang) {
+        if (lang === "ko") {
+            return;
+        }
+
         $.each(languageData[lang], function (selector, value) {
             const isProperty = selector.startsWith("[") && selector.endsWith("]");
             if (isProperty) {
@@ -203,17 +207,18 @@ $(() => {
         });
     }
 
-    // // 페이지 로드 시 저장된 언어 설정 적용
-    // const savedLang = getCookie("language");
-    // if (savedLang) {
-    //     $languageSelect.val(savedLang);
-    //     changeLanguage(savedLang);
-    // }
+    // 페이지 로드 시 저장된 언어 설정 적용
+    const savedLang = getCookie("language");
+    if (savedLang) {
+        $languageSelect.val(savedLang);
+        changeLanguage(savedLang);
+    }
 
-    // // 언어 선택 변경 시 쿠키 저장 및 언어 변경
-    // $languageSelect.on("change", function () {
-    //     const selectedLang = $(this).val();
-    //     setCookie("language", selectedLang, 30); // 30일 동안 쿠키 유지
-    //     changeLanguage(selectedLang);
-    // });
+    // 언어 선택 변경 시 쿠키 저장 및 언어 변경
+    $languageSelect.on("change", function () {
+        const selectedLang = $(this).val();
+        setCookie("language", selectedLang, 30); // 30일 동안 쿠키 유지
+        // changeLanguage(selectedLang);
+        location.reload(true);
+    });
 });
